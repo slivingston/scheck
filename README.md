@@ -2,7 +2,7 @@
 
 ## Introduction
 
-scheck is a tool for translating safety LTL formulae to finite automata.
+[scheck](http://tcs.legacy.ics.tkk.fi/users/tlatvala/scheck/) is a tool for translating safety LTL formulae to finite automata.
 The algorithm used in the tool was presented in the paper:
 
 [Timo Latvala](http://www.tcs.hut.fi/~timo/)
