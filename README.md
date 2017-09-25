@@ -102,6 +102,3 @@ See the file "COPYING" for details.
 valuable ideas for scheck. Some of the utility classes and functions were
 originally written by [Marko Mäkelä](http://www.tcs.hut.fi/~msmakela/)
 for [Maria](http://www.tcs.hut.fi/maria/).
-
-----
-<address><a href="mailto:timo.latvala@hut.fi"></a></address>
