@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>scheck</title>
+  </head>
+
+  <body>
+    <h1>scheck -- finite automata from LTL safety formulae</h1>
+
+    <h2>Introduction</h2>    
+    <p>
+      scheck is a tool for translating safety LTL formulae to finite automata.
+      The algorithm used in the tool was presented in the paper: 
+    </p>
+
+    <p>
+      <a href="http://www.tcs.hut.fi/~timo/">Timo Latvala</a>. 
+      <a href="http://www.springerlink.com/app/home/contribution.asp?wasp=g3t6yvlvtjdw0d14gp81&referrer=parent&backto=issue,5,17;journal,64,1181;linkingpublicationresults,1,1">Efficient Model Checking of Safety Properties.</a> 
+      In: T. Ball and S.K. Rajamani (eds.), Model Checking Software. 
+      10th International SPIN Workshop. Volume 2648 of LNCS, pp. 74-88, 
+      Springer, 2003.
+    </p>
+    
+    <h2>Usage</h2>
+    <p>    
+      Usage: scheck [options] {inputfile}. Without any options scheck reads the input
+      from the standard input outputs to the standard output a non-deterministic 
+      automaton corresponding to the given safety formula.
+    </p>
+
+    <h3>options</h3>
+    <table>
+	<tr>
+	  <td>-o</td> 
+	  <td>file</td>  
+	  <td>specify outputfile</td>
+	</tr>
+	<tr>
+	  <td>-d</td>
+	  <td> </td>
+	  <td>produce a deterministic automaton</pd>
+	</tr>
+	<tr>
+	  <td>-s</td>
+	  <td> </td>
+	  <td>check for syntactic safety</td>
+	</tr>
+	<tr>
+	  <td>-p</td>
+	  <td>translator</td>
+	  <td>check if formula is pathologic</td>
+	</tr>
+	<tr>
+	  <td>-v</td>
+	  <td> </td>
+	  <td>output version and exit</td>
+	  </tr>
+    </table>
+
+    <p>
+      Checking if a formula is pathologic requires an external translator which 
+      translates and LTL formula to a Büchi automaton. scheck expects the translator
+      to accept the scheck prefix notation for LTL formulae and return the result
+      in the automata format of scheck. One such tool is 
+      <a href="http://www.tcs.hut.fi/maria/tools/lbt">lbt</a>. If you only have
+      a tool which accepts the format of the 
+      <a href="http://spinroot.com">Spin model checker</a> you can use a utility
+      by <a href="http://www.tcs.hut.fi/~htauriai/">Heikki Tauriainen</a> which 
+      is distributed with his excellent LTL to Büchi translator testing tool 
+      <a href="http://www.tcs.hut.fi/~htauriai/lbtt">lbtt</a>.
+      scheck calls the external transator in the following way: 
+      <em>translator inputfile outputfile</em>.
+    </p>
+    
+    <h2>Compiling scheck</h2>
+    <p>
+      scheck has been written using strict ANSI C++. It, however, uses some SGI 
+      extensions to the Standard Template Library. For compilers supporting templates
+      and the SGI extensions to the STL compiling scheck should be as simple as typing 'make'.
+      Examples of such compilers are gcc, version 2.96 and version 3.3.
+    </p>
+
+    <h2>Interfacing the Translator</h2>
+    <p>
+    The tool reads input from the standard input and outputs the result
+    to the standard output by default. Both the input and the output 
+    format is a form of prefix notation. A precise description can 
+    be found
+    <a href="http://www.tcs.hut.fi/Software/maria/tools/lbt/">here</a>.
+    </p>
+
+    <h2>Version History</h2>
+    <p>
+    New in version 1.2
+    </p>
+    <li> Implemented the QM-algorithm to generate shorter expressions for the arcs
+    <li> Fixed a bug which could result in errors for the pathologic check
+
+    <p>
+      New in version 1.1.    
+    </p>
+    
+    <li>Eliminated BDDs from the code. The code uses bitvectors instead.</li>
+      
+    <li>Added a Hopcroft style minimisation as a last step when outputting. </li> 
+    deterministic automatons.
+    
+    <li>scheck performs some simple rewriting of the formulas before it proceeds to create
+      the finite automaton.
+      
+
+    <p>
+      Version 1.0 -- orginal release.
+    </p>
+    <h2>Copying</h2>
+    <p>
+    The tool is licenced under the <a href="http://www.gnu.org/licenses/gpl.html"> 
+    GNU Public License</a>. See the file "COPYING" for details.
+    </p>
+
+    <h2>Acknowledgements</h2>
+    <p>
+    <a href="http://www.tcs.hut.fi/~kepa/">Keijo Heljanko</a> contributed with 
+      valuable ideas for scheck. Some of the utility classes and functions were
+      originally written by <a href="http://www.tcs.hut.fi/~msmakela/">	Marko Mäkelä</a> 
+      for <a href="http://www.tcs.hut.fi/maria/">Maria</a>.
+    </p>
+
+    <hr>
+    <address><a href="mailto:timo.latvala@hut.fi"></a></address>
+<!-- Created: Wed Aug  6 14:42:58 EEST 2003 -->
+<!-- hhmts start -->
+Last modified: Mon Nov 1 09:18:30 EEST 2004
+<!-- hhmts end -->
+  </body>
+</html>
