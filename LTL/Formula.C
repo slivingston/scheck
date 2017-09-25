@@ -49,7 +49,7 @@ Formula::Iterator::operator++()
 
 //-------------------------------------
 
-Formula::PostIterator::PostIterator(const class Formula *formula): myStack(*new class FormulaStack()) 
+Formula::PostIterator::PostIterator(const class Formula *formula): myStack(*new FormulaStack())
 {
   bool loop=true;
   myCurrent=const_cast<Formula *>(formula);

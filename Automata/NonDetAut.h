@@ -32,7 +32,7 @@ class NonDetAut : public Automaton  {
    */
   void addTransition(unsigned source, unsigned label, unsigned dest) {
     assert(source<mySize && label<myAlphabetSize && dest<mySize);
-    myTransRel.insert(TransRel::value_type(class UIPair(source, label), dest));
+    myTransRel.insert(TransRel::value_type(UIPair(source, label), dest));
     return;
   }
   /**Delete a transition
@@ -42,7 +42,7 @@ class NonDetAut : public Automaton  {
    */
   void deleteTransition(unsigned source, unsigned label, unsigned dest) {
     assert(source <= mySize && label<myAlphabetSize && dest<mySize);
-    for(std::pair<TransRel::iterator, TransRel::iterator> p=myTransRel.equal_range(class UIPair(source, label));
+    for(std::pair<TransRel::iterator, TransRel::iterator> p=myTransRel.equal_range(UIPair(source, label));
 	p.first!=p.second; ++p.first) {
       if((*p.first).second == dest) {
 	myTransRel.erase(p.first);
@@ -62,7 +62,7 @@ class NonDetAut : public Automaton  {
     assert(source < mySize && label<myAlphabetSize);
     unsigned j=0;
     for(std::pair<TransRel::const_iterator, TransRel::const_iterator> 
-	  p=myTransRel.equal_range(class UIPair(source, label));
+	  p=myTransRel.equal_range(UIPair(source, label));
     	p.first!=p.second; ++p.first) {
       if(index == j++ ) {
       	return (*p.first).second;
@@ -73,7 +73,7 @@ class NonDetAut : public Automaton  {
   /**@return Number of arcs with the given source and label*/  
   unsigned numArcs(unsigned source, unsigned label) const {
     assert(source<mySize && label<myAlphabetSize);
-    return myTransRel.count(class UIPair(source, label));
+    return myTransRel.count(UIPair(source, label));
   }
   /*Check if a state belongs to a final set
    * @param state

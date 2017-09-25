@@ -13,7 +13,7 @@
 //forward declaration of file
 struct _IO_FILE;
 typedef struct _IO_FILE FILE;
-extern FILE *stdout;
+#include <cstdio>
 
 class Automaton {
   

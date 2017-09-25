@@ -73,7 +73,7 @@ public:
    *@param formula Formula to iterate trough
    */
   //Iterator(const class Formula *formula);
-  Iterator(const class Formula *formula): myStack(*new class FormulaStack()) 
+  Iterator(const class Formula *formula): myStack(*new FormulaStack())
   {
     myStack.push(formula);
   }
@@ -89,7 +89,7 @@ public:
   bool atEnd() const;
 
 private:
-  class FormulaStack &myStack;
+  FormulaStack &myStack;
 };
 
 /**Traverse the formula in postorder*/
@@ -111,7 +111,7 @@ public:
   bool atEnd() const;
 
 private:
-  class FormulaStack &myStack;
+  FormulaStack &myStack;
   class Formula *myCurrent;
 };
 
