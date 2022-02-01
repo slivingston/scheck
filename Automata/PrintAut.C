@@ -79,7 +79,7 @@ static void QM(MultiMap::const_iterator iter, unsigned count, unsigned num, Impl
   }
   
   while(!iset.empty()) {
-    for(ImplicantSet::iterator i=iset.begin(); i!=iset.end(); ++i) {
+    for(ImplicantSet::iterator i=iset.begin(); i!=iset.end(); ) {
       bool joined=false;
       for (ImplicantSet::iterator j=i; j!=iset.end(); ++j) { 
 	if((*i).joinable(*j)) {
@@ -95,6 +95,7 @@ static void QM(MultiMap::const_iterator iter, unsigned count, unsigned num, Impl
 	covering.insert(*i);
       }
       ImplicantSet::iterator it=i;
+      ++i;
       iset.erase(it);
     }
   } 
