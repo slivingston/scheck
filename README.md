@@ -6,10 +6,11 @@
 The algorithm used in the tool was presented in the paper:
 
 [Timo Latvala](http://www.tcs.hut.fi/~timo/)
-[Efficient Model Checking of Safety Properties.](http://www.springerlink.com/app/home/contribution.asp?wasp=g3t6yvlvtjdw0d14gp81&referrer=parent&backto=issue,5,17;journal,64,1181;linkingpublicationresults,1,1)
+[Efficient Model Checking of Safety Properties.](https://spinroot.com/spin/symposia/ws03/Latvala.pdf)
 In: T. Ball and S.K. Rajamani (eds.), Model Checking Software.
 10th International SPIN Workshop. Volume 2648 of LNCS, pp. 74-88,
 Springer, 2003.
+DOI: [10.1007/3-540-44829-2_5](https://doi.org/10.1007/3-540-44829-2_5)
 
 ## Usage
 
