@@ -104,5 +104,5 @@ See the file "COPYING" for details.
 
 [Keijo Heljanko](http://www.tcs.hut.fi/~kepa/) contributed with
 valuable ideas for scheck. Some of the utility classes and functions were
-originally written by [Marko Mäkelä](http://www.tcs.hut.fi/~msmakela/)
+originally written by [Marko Mäkelä](https://web.archive.org/web/20110723152922/http://tcs.legacy.ics.tkk.fi/~msmakela/)
 for [Maria](http://www.tcs.hut.fi/maria/).
