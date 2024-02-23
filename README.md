@@ -56,7 +56,7 @@ a tool which accepts the format of the
 [Spin model checker](https://spinroot.com) you can use a utility
 by [Heikki Tauriainen](https://web.archive.org/web/20091001125942/http://www.tcs.hut.fi/~htauriai/) which
 is distributed with his excellent LTL to Büchi translator testing tool
-[lbtt](http://www.tcs.hut.fi/~htauriai/lbtt).
+[lbtt](https://web.archive.org/web/20080605232012/http://www.tcs.hut.fi/Software/lbtt/).
 scheck calls the external transator in the following way:
 *translator inputfile outputfile*.
 
