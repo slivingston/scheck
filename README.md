@@ -76,7 +76,7 @@ be found [here](http://www.tcs.hut.fi/Software/maria/tools/lbt/).
 
 ## Wrappers in other languages
 
-* [readlbt.py](https://github.com/tulip-control/tulip-control/blob/master/contrib/readlbt.py) is available with [TuLiP](http://tulip-control.org/). It can load output from `scheck` into a NetworkX graph in Python.
+* [readlbt.py](https://github.com/tulip-control/tulip-control/blob/main/contrib/readlbt.py) is available with [TuLiP](http://tulip-control.org/). It can load output from `scheck` into a NetworkX graph in Python.
 
 ## Version History
 
