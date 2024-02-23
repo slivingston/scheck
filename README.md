@@ -54,7 +54,7 @@ in the automata format of scheck. One such tool is
 [lbt](http://www.tcs.hut.fi/maria/tools/lbt). If you only have
 a tool which accepts the format of the
 [Spin model checker](https://spinroot.com) you can use a utility
-by [Heikki Tauriainen](http://www.tcs.hut.fi/~htauriai/) which
+by [Heikki Tauriainen](https://web.archive.org/web/20091001125942/http://www.tcs.hut.fi/~htauriai/) which
 is distributed with his excellent LTL to Büchi translator testing tool
 [lbtt](http://www.tcs.hut.fi/~htauriai/lbtt).
 scheck calls the external transator in the following way:
