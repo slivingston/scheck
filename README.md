@@ -96,7 +96,7 @@ Version 1.0 -- orginal release.
 ## Copying
 
 The tool is licenced under the
-[GNU Public License](http://www.gnu.org/licenses/gpl.html).
+[GNU Public License](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 See the file "COPYING" for details.
 
 
